@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body { font-family: 'Noto Sans KR', sans-serif; }
   </style>
@@ -37,8 +39,12 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-4" style="background-image: url('your-hero-image.jpg')">
-    <div class="bg-black bg-opacity-50 p-8 rounded-xl">
+  <section class="relative h-screen text-white text-center flex items-center justify-center px-4">
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-0">
+      <source src="your-hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="relative z-10 bg-black bg-opacity-50 p-8 rounded-xl" data-aos="fade-up">
       <h2 class="text-4xl lg:text-5xl font-bold mb-4">Experience Real Korean BBQ</h2>
       <p class="text-lg mb-6">Authentic taste. Premium cuts. Master Butcher techniques.</p>
       <div class="space-x-4">
@@ -47,9 +53,10 @@
       </div>
     </div>
   </section>
+  
 
   <!-- About Section -->
-  <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
+  <section id="about" class="py-20 px-6 max-w-5xl mx-auto" data-aos="fade-up">
     <h3 class="text-3xl font-bold text-center mb-8">Our Story</h3>
     <p class="text-center max-w-2xl mx-auto mb-8">Wolhwa Group has over 16 years of expertise in the highly competitive Korean BBQ industry, proudly recognized by Korea’s “Blue Ribbon Survey” for five consecutive years.</p>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -61,21 +68,21 @@
   </section>
 
   <!-- Menu Section -->
-  <section id="menu-section" class="py-20 bg-white px-6">
+  <section id="menu-section" class="py-20 bg-white px-6" data-aos="fade-up">
     <h3 class="text-3xl font-bold text-center mb-12">Signature Dishes</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-gray-100 p-4 rounded-xl shadow">
-        <img src="your-dish1.jpg" alt="Dry-aged Samgyupsal" class="rounded-lg mb-4">
+      <div class="bg-gray-100 p-4 rounded-xl shadow" data-aos="zoom-in">
+        <img src="/mnt/data/your-dish1.png" alt="Dry-aged Samgyupsal" class="rounded-lg mb-4">
         <h4 class="font-bold text-xl">Dry-aged Samgyupsal</h4>
         <p>Specially prepared to maintain tender texture and juicy flavor.</p>
       </div>
-      <div class="bg-gray-100 p-4 rounded-xl shadow">
-        <img src="your-dish2.jpg" alt="Marinated Galbi" class="rounded-lg mb-4">
+      <div class="bg-gray-100 p-4 rounded-xl shadow" data-aos="zoom-in" data-aos-delay="100">
+        <img src="/mnt/data/your-hero-image.jpg" alt="Marinated Galbi" class="rounded-lg mb-4">
         <h4 class="font-bold text-xl">Marinated Galbi</h4>
         <p>Crafted with our signature Korean sauce—deeply flavorful and satisfying.</p>
       </div>
-      <div class="bg-gray-100 p-4 rounded-xl shadow">
-        <img src="your-dish3.jpg" alt="Premium Beef Cuts" class="rounded-lg mb-4">
+      <div class="bg-gray-100 p-4 rounded-xl shadow" data-aos="zoom-in" data-aos-delay="200">
+        <img src="/mnt/data/your-dish1.png" alt="Premium Beef Cuts" class="rounded-lg mb-4">
         <h4 class="font-bold text-xl">Premium Beef Cuts</h4>
         <p>Nine carefully selected cuts to experience the full flavor range.</p>
       </div>
@@ -83,14 +90,14 @@
   </section>
 
   <!-- Franchise Section -->
-  <section id="franchise" class="py-20 bg-gray-50 px-6 text-center">
+  <section id="franchise" class="py-20 bg-gray-50 px-6 text-center" data-aos="fade-up">
     <h3 class="text-3xl font-bold mb-6">Start a Franchise</h3>
     <p class="mb-6">Interested in bringing Wolhwa Galbi to your area?</p>
     <a href="mailto:franchise@wolhwagalbi.ph" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg">Contact Us for Franchising</a>
   </section>
 
   <!-- Contact Section -->
-  <footer id="contact" class="bg-gray-900 text-white py-10 px-6">
+  <footer id="contact" class="bg-gray-900 text-white py-10 px-6" data-aos="fade-up">
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
         <h4 class="text-xl font-bold mb-2">Visit Us</h4>
@@ -117,6 +124,12 @@
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // AOS init
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 </body>
