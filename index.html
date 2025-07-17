@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolhwa Galbi - Real Korean BBQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Noto Sans KR', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white shadow fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Wolhwa Galbi</h1>
+      <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <nav id="menu" class="hidden lg:flex space-x-6">
+        <a href="#about" class="hover:text-red-600">About</a>
+        <a href="#menu-section" class="hover:text-red-600">Menu</a>
+        <a href="#franchise" class="hover:text-red-600">Franchise</a>
+        <a href="#contact" class="hover:text-red-600">Contact</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden px-4 py-2 space-y-2 bg-white">
+      <a href="#about" class="block">About</a>
+      <a href="#menu-section" class="block">Menu</a>
+      <a href="#franchise" class="block">Franchise</a>
+      <a href="#contact" class="block">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-4" style="background-image: url('your-hero-image.jpg')">
+    <div class="bg-black bg-opacity-50 p-8 rounded-xl">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-4">Experience Real Korean BBQ</h2>
+      <p class="text-lg mb-6">Authentic taste. Premium cuts. Master Butcher techniques.</p>
+      <div class="space-x-4">
+        <a href="#menu-section" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg">View Menu</a>
+        <a href="#contact" class="bg-white text-red-600 hover:bg-red-100 px-4 py-2 rounded-lg">Visit Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-8">Our Story</h3>
+    <p class="text-center max-w-2xl mx-auto mb-8">Wolhwa Group has over 16 years of expertise in the highly competitive Korean BBQ industry, proudly recognized by Korea’s “Blue Ribbon Survey” for five consecutive years.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>2009<br/>First Store</div>
+      <div>2014<br/>Mullae Store</div>
+      <div>2015<br/>Sangam Store</div>
+      <div>2024<br/>Opens in Manila</div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu-section" class="py-20 bg-white px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Signature Dishes</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-100 p-4 rounded-xl shadow">
+        <img src="your-dish1.jpg" alt="Dry-aged Samgyupsal" class="rounded-lg mb-4">
+        <h4 class="font-bold text-xl">Dry-aged Samgyupsal</h4>
+        <p>Specially prepared to maintain tender texture and juicy flavor.</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-xl shadow">
+        <img src="your-dish2.jpg" alt="Marinated Galbi" class="rounded-lg mb-4">
+        <h4 class="font-bold text-xl">Marinated Galbi</h4>
+        <p>Crafted with our signature Korean sauce—deeply flavorful and satisfying.</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-xl shadow">
+        <img src="your-dish3.jpg" alt="Premium Beef Cuts" class="rounded-lg mb-4">
+        <h4 class="font-bold text-xl">Premium Beef Cuts</h4>
+        <p>Nine carefully selected cuts to experience the full flavor range.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Franchise Section -->
+  <section id="franchise" class="py-20 bg-gray-50 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-6">Start a Franchise</h3>
+    <p class="mb-6">Interested in bringing Wolhwa Galbi to your area?</p>
+    <a href="mailto:franchise@wolhwagalbi.ph" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg">Contact Us for Franchising</a>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="bg-gray-900 text-white py-10 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h4 class="text-xl font-bold mb-2">Visit Us</h4>
+        <p>Mall of Asia Arena Annex (MAAX)<br> Coral Way Cor. J.W. Boulevard<br> MOA Complex, Pasay City</p>
+        <p class="mt-4">📞 +63 954 336 6841</p>
+        <p>📧 team@wolhwagalbi.ph</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-2">Follow Us</h4>
+        <div class="space-x-4 mt-2">
+          <a href="https://www.facebook.com/wolhwagalbi.ph/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/wolhwagalbi.ph/" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@wolhwagalbi.ph" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-8 text-sm">© 2025 Wolhwa Galbi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
